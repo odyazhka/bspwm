@@ -28,7 +28,11 @@ sudo xbps-install -S terminus-font nerd-fonts-symbols-ttf bspwm polybar rofi feh
 yay -S ttf-terminus-nerd
 ```
 
-#### 2. Переместить дотфайлы из репозитория к себе в .config
+#### 2. Скачать дотфайлы из репозитория к себе в .config
+
+```
+git clone https://github.com/odyazhka/bspwm.git ~/bspwm && cp -r ~/bspwm/{bspwm,polybar,rofi,sxhkd} ~/.config/
+```
 
 #### 3. Сделать исполняемыми файлы
 
