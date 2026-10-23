@@ -31,7 +31,9 @@ yay -S ttf-terminus-nerd
 #### 2. Скачать дотфайлы из репозитория к себе в .config
 
 ```
-git clone https://github.com/odyazhka/bspwm.git ~/bspwm && cp -r ~/bspwm/{bspwm,polybar,rofi,sxhkd} ~/.config/
+git clone https://github.com/odyazhka/bspwm.git ~/bspwm
+cp -r ~/bspwm/{bspwm,polybar,rofi,sxhkd} ~/.config/
+sudo cp -r ~/bspwm/00-keyboard.conf /etc/X11/xorg.conf.d/
 ```
 
 #### 3. Сделать исполняемыми файлы
@@ -49,13 +51,8 @@ Cкачать и запустить устаногвочный скрипт от
 
 В visudo прописать /usr/local/bin/brightness для смены яркости без пароля
 
-#### 5. Для смены рскладки должен существовать файл 00-keyboard.conf в /etc/X11/xorg.conf.d
 
-Переместите его куда если ещё нет и сделайте исполняемым
-
-``` sudo chmod 777 /etc/X11/xorg.conf.d/00-keyboard.conf ```
-
-#### 6. Для безпарольного выключения, перезагрузки, гибернации и прочих действий редактируйте visudo:
+#### 5. Для безпарольного выключения, перезагрузки, гибернации и прочих действий редактируйте visudo:
 
 ``` sudo EDITOR=nano visudo ```
 
@@ -65,13 +62,13 @@ Cкачать и запустить устаногвочный скрипт от
 
 Сохраняем и выходим: контрл+o, контрл+x
 
-#### 7. Поставить обои:
+#### 6. Поставить обои:
 
 ```
 feh --bg-scale ~/oboi.png
 ```
 
-#### 8. Панель интегрирована с odjk-wifi
+#### 7. Панель интегрирована с odjk-wifi
 
 Скачать можно тут:
 
