@@ -66,20 +66,13 @@ Cкачать и запустить устаногвочный скрипт от
 feh --bg-scale ~/oboi.png
 ```
 
-#### 8. Панель интегрирована с odjk-wifi и odjk-blue
+#### 8. Панель интегрирована с odjk-wifi
 
-Скачать их можно тут:
+Скачать можно тут:
 
 https://github.com/odyazhka/odjk-wifi
 
-https://github.com/odyazhka/odjk-blue
 
-Просто скачайте бинарники и положите их в /usr/local/bin/
+Просто скачайте бинарники и положите его в /usr/local/bin/
 
-Также sxhkd интегрирован с сервисным менеджером odjk-sv (super+s) и сетевыам менеджером odjk-ip (super+n)
 
-https://github.com/odyazhka/odjk-sv
-
-https://github.com/odyazhka/odjk-ip
-
-Тоже просто скачайте бинарники и положите их в /usr/local/bin/
