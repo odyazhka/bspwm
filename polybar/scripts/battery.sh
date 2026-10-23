@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 BATTERY="${BATTERY:-BAT0}"
 MONITOR="${MONITOR:-default}"
