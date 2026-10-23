@@ -1,10 +1,7 @@
 #! /bin/sh
 
-# 1. Геометрия экранов: от неё зависит всё остальное
-xrandr --output HDMI-0 --mode 1920x1080 --rate 120 --primary
-
 # 2. Рабочие столы по мониторам
-bspc monitor HDMI-0 -d 1 2 3 4 5 vpn
+bspc monitor -d 1 2 3 4 5
 
 # 3. Настройки bspwm
 bspc config border_width        3
@@ -31,8 +28,3 @@ feh --bg-scale ~/oboi.png &
 
 # 6. Горячие клавиши в самом конце
 pgrep -x sxhkd >/dev/null || sxhkd -c ~/.config/sxhkd/sxhkdrc &
-
-# 7. VPN
-bspc rule -a '*' -o desktop=vpn          # следующее окно откроется на vpn
-bspc desktop vpn -f                      # переключиться на vpn
-sudo happ &
