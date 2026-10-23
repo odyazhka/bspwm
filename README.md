@@ -24,8 +24,7 @@
 #### 1. Установить пакеты:
 
 ```
-sudo xbps-install -S terminus-font nerd-fonts-symbols-ttf bspwm polybar rofi feh dbus xlockmore maim xdotool xclip jq pulseaudio pavucontrol feh numlockx btop pavucontrol-qt
-yay -S ttf-terminus-nerd
+sudo xbps-install -S terminus-font nerd-fonts-symbols-ttf bspwm polybar rofi feh dbus xlockmore maim xdotool xclip jq pulseaudio pavucontrol feh numlockx btop pavucontrol-qt ttf-terminus-nerd
 ```
 
 #### 2. Скачать дотфайлы из репозитория к себе в .config
