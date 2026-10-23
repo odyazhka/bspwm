@@ -1,0 +1,38 @@
+#! /bin/sh
+
+# 1. Геометрия экранов: от неё зависит всё остальное
+xrandr --output HDMI-0 --mode 1920x1080 --rate 120 --primary
+
+# 2. Рабочие столы по мониторам
+bspc monitor HDMI-0 -d 1 2 3 4 5 vpn
+
+# 3. Настройки bspwm
+bspc config border_width        3
+bspc config window_gap          0
+bspc config focused_border_color "#E61A99"
+bspc config normal_border_color "#595959"
+bspc config single_monocle false
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config focus_follows_pointer true
+bspc config focus_by_distance true
+
+# 4. Ресурсы и клавиатура (без &, они быстрые)
+xrdb -merge $HOME/.Xresources
+xmodmap ~/.Xmodmap
+numlockx on &
+xsetroot -cursor_name left_ptr &
+
+# 5. То, что зависит от экранов и столов
+feh --bg-scale ~/oboi.png &
+~/.config/polybar/scripts/bg --restore &
+~/.config/polybar/scripts/launch.sh &
+
+# 6. Горячие клавиши в самом конце
+pgrep -x sxhkd >/dev/null || sxhkd -c ~/.config/sxhkd/sxhkdrc &
+
+# 7. VPN
+bspc rule -a '*' -o desktop=vpn          # следующее окно откроется на vpn
+bspc desktop vpn -f                      # переключиться на vpn
+sudo happ &
