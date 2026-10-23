@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # bspwm-drag-split.sh
 # Зависимости: xdotool, xinput, bspc
 #
