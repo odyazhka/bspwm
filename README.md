@@ -24,10 +24,17 @@
 #### 1. Установить пакеты:
 
 ```
-sudo xbps-install -S terminus-font nerd-fonts-symbols-ttf bspwm polybar rofi feh dbus xlockmore maim xdotool xclip jq pulseaudio pavucontrol feh numlockx
+sudo pacman -S --needed bspwm sxhkd polybar rofi feh xterm xorg-server xorg-xinit xorg-xrandr terminus-font dbus maim xdotool xclip jq pulseaudio numlockx sudo yay btop pavucontrol-qt
+yay -S ttf-nerd-fonts-symbols xlockmore
 ```
 
-#### 2. Переместить дотфайлы из репозитория к себе в .config
+#### 2. Скачать дотфайлы из репозитория к себе в .config
+
+```
+git clone https://github.com/odyazhka/bspwm.git ~/bspwm
+cp -r ~/bspwm/{bspwm,polybar,rofi,sxhkd} ~/.config/
+sudo cp -r ~/bspwm/00-keyboard.conf /etc/X11/xorg.conf.d/
+```
 
 #### 3. Сделать исполняемыми файлы
 
@@ -44,29 +51,16 @@ Cкачать и запустить устаногвочный скрипт от
 
 В visudo прописать /usr/local/bin/brightness для смены яркости без пароля
 
-#### 5. Для смены рскладки должен существовать файл 00-keyboard.conf в /etc/X11/xorg.conf.d
 
-Переместите его куда если ещё нет и сделайте исполняемым
-
-``` sudo chmod 777 /etc/X11/xorg.conf.d/00-keyboard.conf ```
-
-#### 6. Для безпарольного выключения, перезагрузки, гибернации и прочих действий редактируйте visudo:
-
-``` sudo EDITOR=nano visudo ```
-
-Он должен выглядеть примерно вот так:
-<img width="653" height="126" alt="изображение" src="https://github.com/user-attachments/assets/54e24de2-e1cf-41bf-884c-f3de2bfa47d4" />
-(вместо iwa ваше имя пользователя)
-
-Сохраняем и выходим: контрл+o, контрл+x
-
-#### 7. Поставить обои:
+#### 5. Поставить свои обои можно так:
 
 ```
 feh --bg-scale ~/oboi.png
 ```
 
-#### 8. Панель интегрирована с odjk-wifi
+~/oboi.png - ваши обои
+
+#### 6. Панель интегрирована с odjk-wifi
 
 Скачать можно тут:
 
@@ -88,7 +82,9 @@ super + g — поменять текущее окно местами с сам�
 super + y — переместить самое новое помеченное окно на предвыбранное место.
 super + r — повернуть родительский контейнер на 90°.
 super + z — переключить раскладку рабочего стола: мозаика / монокль (одно окно на весь экран).
-alt + ЛКМ (зажать) — разделение окна. Зажмите Alt и ЛКМ на окне, а потом перетащите курсор на другое окно: скрипт alt.sh предпросматривает направление разделения (запад/восток/север/юг по форме и положению курсора) и ставит текущее окно рядом с целевым. Отпускание кнопки завершает операцию.
+alt + ЛКМ (зажать) — разделение окна
+super + ЛКМ - перенеос окна
+super + ПКМ - изменить размер окна
 
 ##### Скрытие и режимы просмотра
 

@@ -85,14 +85,6 @@ super + l
 ctrl + alt + Delete
     ~/.config/rofi/rofi-power.sh
     
-# МЕНЕДЖЕР СЕРВИСОВ
-super + v
-    odjk-sv
-    
-# МЕНЕДЖЕР СЕТЕЙ
-super + n
-    odjk-ip
-
 #
 # state/flags
 #
