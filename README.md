@@ -24,7 +24,7 @@
 #### 1. Установить пакеты:
 
 ```
-sudo pacman -S --needed bspwm sxhkd polybar rofi feh xterm xorg-server xorg-xinit xorg-xrandr terminus-font dbus maim xdotool xclip jq pulseaudio numlockx sudo yay btop pavucontrol-qt
+sudo pacman -S --needed bspwm sxhkd polybar rofi feh xterm xorg-server xorg-xinit xorg-xrandr terminus-font dbus maim xdotool xclip jq pulseaudio numlockx sudo btop pavucontrol-qt
 yay -S ttf-nerd-fonts-symbols xlockmore
 ```
 
